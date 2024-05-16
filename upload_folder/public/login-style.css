@@ -1,0 +1,607 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;400;600&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin :0;
+    padding :0;
+    box-sizing:border-box;
+    outline: none; border: none;
+    text-decoration: none;
+} 
+:root{
+    --main-color:#8e44ad;
+    --red:#e74c3c;
+    --oragen:#f39c12;
+    --white:#fff;
+    --black:#030608;
+    --light-color:#888;
+    --light-bg:#eee;
+    --border:.1rem solid rgba(0,0,0,.2);
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+     padding-left: 10rem;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(images/login-background.jpg);
+   
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  
+
+  
+
+nav.dashboard.dark {
+    --white:#222;
+    --black:#fff;
+    --light-color: --black;
+    --light-bg: #888;
+    --border:.1rem solid rgba(255,255,255,.2);
+}
+body.dark nav .navigation ul li a {
+    color: #fff; /* Change to the desired color for dark mode */
+}
+   
+
+.side-bar.dark{
+    --white:#222;
+    --black:#fff;
+    --light-color:#fff;
+    --light-bg:#333;
+    --border:.1rem solid rgba(255,255,255,.2);
+    
+}
+body.active{
+    padding-left: 0;
+   
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+span{
+    font-size: .9rem;
+    color: #757373;
+}
+h6{
+    font-size: 1.1rem;
+    color: rgb(24, 24, 49);
+}
+nav.dashboard{
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 9vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+nav img {
+    max-width: 70px;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 5em;
+    
+}
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 20px;
+    margin-top: 10px;
+    
+}
+nav .navigation ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    
+
+}
+nav .navigation ul li a:hover {
+    color: #FDC93B;
+}
+
+#home{
+    background-image: linear-gradient(rgba(9,5,54,0.3),rgba(5,4,46,0.7)),url(background_image.webp);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 13px;
+}
+
+
+/* Styling for different colored buttons */
+
+
+
+*::selection{
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+*::-webkit-scrollbar{
+    height:  .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.header{
+    background-color: transparent;
+    border-bottom: var(--border);
+    position: sticky;
+    width: 100%;
+    top: 0;left: 0; right: 0;
+    z-index: 1000;
+    
+}
+.header .flex{
+    padding: 2.5rem 0rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .flex .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: bolder;
+}
+.header .flex .icons div{
+    font-size: 2rem;
+    color: var(--black);
+    border-radius: .5rem;
+    height: 4.4rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 4.5rem;
+    line-height: 4.4rem;
+    background-color: var(--light-bg);
+    text-align: center;
+    margin-left: .5rem;
+}
+
+.header .flex .icons div:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.header .flex .profile{
+    position: absolute;
+    top:120%;  right: 2rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+    width: 30rem;
+    transform: scale(0);
+    transform-origin: top ;
+    transition: .2s linear;
+}
+.header .flex .profile.active{
+    transform: scale(1);
+}
+.header .flex .profile img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+ 
+}
+
+.header .flex .profile h3{
+    font-size: 2rem;
+    color: var(--black);
+    
+}
+
+.header .flex .profile span{
+    color: var(--light-color);
+    font-size: 1.6rem;
+}
+.btn,
+.option-btn,
+.delete-btn,
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+    border-radius: .5rem;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+}
+.btn,
+.option-btn,
+.delete-btn{
+    display: block;
+    width: 100%;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+    display: inline-block;
+}
+
+.btn,
+.inline-btn{
+    background-color: var(--main-color);
+}
+.option-btn,
+.inline-option-btn{
+    background-color: var(--oragen);
+
+}
+.delete-btn,
+.inline-delete-btn{
+    background-color: var(--red);
+}
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover,
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover{
+
+  background-color: var(--black);
+  color: var(--white);
+}
+.flex-btn{
+    display: flex;
+    gap: 1.5rem;
+
+}
+
+
+
+
+
+.side-bar{
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    width: 28rem;
+    background-color: var(--white);
+    border-right: var(--border);
+    z-index: 1200;
+    
+}
+
+.side-bar .close-side-bar{
+    text-align: right;
+    display: none;
+}
+
+.side-bar .close-side-bar i{
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: var(--red);
+    border-radius: .2rem;
+}
+
+.side-bar .close-side-bar i:hover{
+     background-color: var(--black);
+}
+.side-bar .profile{
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.side-bar .profile img{
+    height: 10rem;
+    width: 10rem;
+    border-radius:  50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
+.side-bar .profile h3{
+    font-size: 2rem;
+    color: var(--black);
+}
+.side-bar .profile span{
+    color: var(--light-color);
+    font-size: 1.6rem;
+}
+.side-bar .navbar{
+    margin-top: 1rem;
+}
+.side-bar .navbar a{
+    display: block;
+    padding: 1.8rem;
+    margin: .1rem 0;
+    font-size: 1.8rem;
+}
+.side-bar .navbar a i{
+    color: var(--main-color);
+    margin-right: 1.5rem;
+    transition: .2s linear;
+}
+.side-bar .navbar a span{
+    color: var(--light-color);
+    font-size: medium;
+    margin-left: 4rem;
+}
+.side-bar .navbar a:hover{
+    background-color: var(--light-color);
+}
+.side-bar .navbar a:hover i{
+    margin-right: 2.5rem;
+}
+.side-bar.active {
+    left: -31rem;
+    
+   }
+.side-bar.active nav {
+    padding-left: 2rem; /* Adjust the padding on the left side when the sidebar is active */
+    padding-right: .5px; /* Adjust the padding on the right side when the sidebar is active */
+}
+@media (max-width:1200px){
+    body{
+        padding-left: 0;
+    }
+    .side-bar{
+        transition: .2s linear;
+        left: -30rem;
+    }
+    .side-bar.active{
+        left: 0;
+        box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
+    }
+    .side-bar .close-side-bar{
+        display: block;
+    }
+}
+
+@media (max-width:991px){
+     html{
+        font-size: 55%;
+     }
+}
+/* ... Your existing CSS ... */
+
+@media (max-width: 769px) {
+    nav .navigation ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav .navigation ul li{
+        list-style: none;
+        margin-left: 10px
+    }
+    nav .navigation ul li a{
+        text-decoration: none;
+        color: rgb(21, 21, 100);
+        font-size: 50%;
+        font-weight: 50%;
+        transition: 0.3s ease;
+    
+    }
+    .footer{
+        margin-left: 50rem;
+        padding: 10px;
+        text-align: center; 
+        width: 50%;
+        z-index: 100;
+    }
+    .header .flex .icons div{
+        font-size: 1rem;
+        color: var(--black);
+        border-radius: .25rem;
+        
+        height: 2rem;
+        cursor: pointer;
+        width: 2rem;
+        line-height: 2.2rem;
+        background-color: var(--light-color);
+        text-align: center;
+        margin-left: .2rem;
+    }
+    
+}
+
+@media(max-width:450px) {
+    
+    html{
+        font-size: 50%;
+    }
+    
+}
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 10em 50em;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30pc rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    
+  /*  transform: scale(0) ;
+    transition: height .2s ease;
+}
+.wrapper.active-popup{
+    transform: scale(1)
+}
+.wrapper.active{
+    height: 520px;
+}*/
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+/*.wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.wrapper.active .form-box.login{
+   transition: none;
+   transform: translateX(400px);
+
+}*/
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+/*.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);*/
+}
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 40px;
+    height: 40px;
+    background: #162938;
+    font-size: 2.5em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.form-box h2 {
+    font-size: 3em;
+    color: #162938;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: #162938;
+    font-weight: 700;
+    pointer-events: none;
+    
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 6%;
+    font-size: 2rem;
+    
+    color: #162938;
+    line-height: 57px;
+}
+.remember-forgot{
+    font-size: 1.5rem;
+    color: #162938;
+    font-weight: bolder;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: #162938;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+    text-decoration-color: #8e44ad;
+}
+.login-register {
+    font-size: 1.5rem;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-register p a{
+    color: #162938;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.remember-forgot p a:hover{
+    text-decoration: underline;
+    text-decoration-color: #8e44ad;
+}
+
+
+
+  
+
+
+
+
+

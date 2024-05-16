@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload</title>
+    <link rel="stylesheet" href="dept_courses.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body class="upload-body">
+    <header class="header">
+        <section class="flex">
+          <nav class="dashboard">
+            <img src="" alt="">
+            <div class="navigation">
+             <ul>
+                <!--<a href="home.html" class="logo">Rapid Notes</a><!-->
+                <li><a href="home.html">Home</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="questionbanks.html">Question Bank</a></li>
+                <li><a href="questionpapers.html">Question Paper</a></li>
+                <!-- <li><a href="#">Community</a></li>
+                <li><a href="#">Requests</a></li>
+                <li><a href="#">Scholarship Updates</a></li> -->
+                <li><a href="contact.html">Contact us</a></li>
+
+             </ul>
+            </div>
+           <div class="icons">
+             <div id="menu-btn" class="fas fa-bars"></div>
+             <div id="user-btn" class="fas fa-user"></div>
+             <div id="toggle-btn" class="fas fa-sun"></div>
+           </div>
+           
+           <div class="profile">
+              <img src="profile image.jpg" alt="">
+              <h3>Dinesh kumar G</h3>
+              <span>student</span>
+              <a href="profile.html" class="btn">view profile</a>
+              <div class="flex-btn">
+                <a href="login.html" class="option-btn">login</a>
+                <a href="register.html" class="option-btn">register</a>
+
+                
+            </div>
+          </div>
+        </nav>
+       </section>
+       <div class="side-bar">
+
+         <div class="close-side-bar">
+ 
+           <i class="fas fa-times"></i>
+         </div>
+
+        <div class="profile">
+            <img src="profile image.jpg" alt="">
+            <h3>Dinesh kumar G</h3>
+            <span>student</span>
+            <a href="profile.html" class="btn">view profile</a>
+            </div>
+          <nav class="navbar">
+            <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+            <a href="downloads.html"><i class="fas fa-download"></i><span>Downloads</span></a>
+            <a href="Ask_AI.html"><i class="fas fa-comments"></i><span>Ask AI</span></a>
+            <a href="recent_documents.html"><i class="fas fa-file-alt"></i><span>Recent Documents</span></a>
+            <a href="contact.html"><i class="fas fa-chalkboard-user"></i><span>contact us</span></a>
+        </nav>
+    </div>
+</header>
+
+    
+
+<main>
+    <form action="#" method="post" >
+        <div class="upload-container1">
+          <div class="progress-bar">
+            <div class="step active ">Upload</div>
+            <div class="step active">Details</div>
+            <div class="step">Done</div>
+          </div>
+          <div class="upload-content">
+            
+            <div class="form-group">
+                <div class="m"><i class="fas fa-folder"></i>
+              <label for="university">University</label></div>
+              <input type="text" id="university" name="university" placeholder="Search university" required>
+             
+            </div>
+            <div class="form-group">
+                <div class="m"><i class="fa-solid fa-landmark"></i>
+              <label  for="course">Course</label></div>
+              
+              <select id="course" name="course" required>
+                <option value="CSE01">Computer science and engineering (CSE)</option>
+                <option value="CSE02">Computer science and engineering (CSE)</option>
+                <option value="ECE01">Electronics and communication engineering (ECE)</option>
+                <option value="ECE02">Electronics and communication engineering (ECE)</option>
+                <option value="MECH01">Mechanical engineering (MECH)</option>
+                <option value="MECH02">Mechanical engineering (MECH)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category" name="category" required>
+                <option value="Lecture notes">Lecture notes</option>
+                <option value="Assignments">Assignments</option>
+                <option value="Projects">Projects</option>
+                <option value="Question papers">Question papers</option>
+                <option value="Syllabus">Syllabus</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" id="title" name="title" placeholder="Please give your document a descriptive title format(subject name-sem no....)" required>
+            </div>
+            <div class="form-group">
+              <label for="year">Academic year</label>
+              <select id="year" name="year" required>
+                <option value="2018/2019">2018/2019</option>
+                <option value="2019/2020">2019/2020</option>
+                <option value="2020/2021">2020/2021</option>
+                <option value="2021/2022">2021/2022</option>
+                <option value="2022/2023">2022/2023</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea id="description" name="description" placeholder="Please give as much additional information as possible"></textarea>
+            </div>
+            <div class="buttons">
+              <a href="upload.html"><button type="button" id="previous">Previous</button></a>
+              <a href="done.html"><button type="button" id="next">Next</button></a>
+            </div>
+          </div>
+        </div>
+      </form>
+      
+
+
+
+
+    
+
+  
+
+   
+ 
+ 
+
+
+
+
+
+    
+   
+    
+
+
+
+
+
+
+
+
+      
+
+  
+  
+       
+     
+  
+ 
+
+</main>
+    
+
+<script src="script.js"></script>
+
+</body>
+</html>

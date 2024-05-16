@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .search-bar input {
+            width: 60%;
+            height: 2rem;
+            border: 1px solid #ccc;
+            border-radius: .5rem;
+            padding: .5rem;
+            outline: none;
+        }
+        
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-profile img {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            margin-right: .5rem;
+        }
+        
+        .storage-services {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 1rem;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .service {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .service img {
+            width: 4rem;
+            height: 4rem;
+        }
+        
+        .service span {
+            font-size: .8rem;
+            color: #666;
+        }
+        
+        .quick-access {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .quick-access h2 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        
+        .quick-access .icons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .my-files {
+            padding: 1rem;
+        }
+        
+        .my-files h2 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        
+        .my-files .see-all {
+            font-size: .8rem;
+            color: #666;
+            text-decoration: none;
+        }
+        
+        .my-files table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .my-files table th, td {
+            padding: .5rem;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+        
+        .visual-search {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+        }
+        
+        .visual-search img {
+            width: 3rem;
+            height: 3rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search files or folders...">
+            <div class="user-profile">
+                <img src="images/user.jpg" alt="User">
+                <span>Hi, surandor</span>
+            </div>
+        </div>
+        <div class="storage-services">
+            <div class="service">
+                <img src="images/dropbox.png" alt="Dropbox">
+                <span>53.2 GB/1 TB</span>
+            </div>
+            <div class="service">
+                <img src="images/google-drive.png" alt="Google Drive">
+                <span>7.8 GB/100 GB</span>
+            </div>
+            <div class="service">
+                <img src="images/one-drive.png" alt="One Drive">
+                <span>18 MB/5 GB</span>
+            </div>
+        </div>
+        <div class="quick-access">
+            <h2>Quick Access</h2>
+            <div class="icons">
+                <!-- Add icons for recent files or folders here -->
+            </div>
+        </div>
+        <div class="my-files">
+            <h2>My Files</h2>
+            <a href="#" class="see-all">See all</a>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>File Items</th>
+                    <th>Last modified</th>
+                    <th>File Size</th>
+                </tr>
+                <tr>
+                    <td>anyname design-Collections.rar</td>
+                    <td>3 items</td>
+                    <td>Nov 14 2021</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Daily work.xls</td>
+                    <td>1 item</td>
+                    <td>Nov 14 2021</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Photoshoot [John Krasinski].jpg</td>
+                    <td>3 items</td>
+                    <td>Nov 14 2021</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Presentation (6).pptx</td>
+                    <td>-</td>
+                    <td>Nov 14 2021</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Adobe Suite Story [Official Movie Script].pdf</td>
+                    <td>-</td>
+                    <td>Nov 14 2021</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
+        <div class="visual-search">
+            <img src="images/visual-search.png" alt="Visual search">
+        </div>
+    </div>
+    
+</body>
+</html>
